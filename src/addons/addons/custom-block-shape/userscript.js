@@ -55,6 +55,7 @@ export default async function ({ addon, console }) {
         `l ${4 * multiplier * notchSize} ${-4 * multiplier * notchSize} ` +
         `c 1 ${-1 * notchSize} 2 ${-2 * notchSize} 4 ${-2 * notchSize} `
       BlockSvg.NOTCH_PATH_RIGHT =
+        `h ${(-4 * (cornerSize - 1) - 5 * (1 - notchSize))} ` +
         `c -2 0 -3 ${1 * notchSize} -4 ${2 * notchSize} ` +
         `l ${-4 * multiplier * notchSize} ${4 * multiplier * notchSize} ` +
         `c -1 ${1 * notchSize} -2 ${2 * notchSize} -4 ${2 * notchSize} ` +
@@ -73,6 +74,7 @@ export default async function ({ addon, console }) {
         `l ${4 * multiplier * notchSize} ${-4 * multiplier * notchSize} ` +
         `c 1 ${-1 * notchSize} 2 ${-2 * notchSize} 4 ${-2 * notchSize} `
       BlockSvg.NOTCH_SWITCH_PATH_RIGHT =
+        `h ${(-4 * (cornerSize - 1) - 5 * (1 - notchSize))} ` +
         `c -2 0 -3 ${1 * notchSize} -4 ${2 * notchSize} ` +
         `l ${-4 * multiplier * notchSize} ${4 * multiplier * notchSize} ` +
         `c -1 ${1 * notchSize} -2 ${2 * notchSize} -4 ${2 * notchSize} ` +
