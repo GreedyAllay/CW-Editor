@@ -78,9 +78,9 @@ export default async function ({ addon, console }) {
         `c -1 ${1 * notchSize} -2 ${2 * notchSize} -4 ${2 * notchSize} ` +
         `c ${-4 * (multiplier - 0.5)} 0 ${-8 * (multiplier - 0.5)} ${-8 * (multiplier - 0.5) * notchSize} ${-12 * (multiplier - 0.5)} ${-8 * (multiplier - 0.5) * notchSize} ` +
         `c ${-4 * (multiplier - 0.5)} 0 ${-8 * (multiplier - 0.5)} ${8 * (multiplier - 0.5) * notchSize} ${-12 * (multiplier - 0.5)} ${8 * (multiplier - 0.5) * notchSize} ` +
-        `c 2 0 3 ${-1 * notchSize} 4 ${-2 * notchSize} ` +
-        `l ${4 * multiplier * notchSize} ${-4 * multiplier * notchSize} ` +
-        `c 1 ${-1 * notchSize} 2 ${-2 * notchSize} 4 ${-2 * notchSize} `
+        `c -2 0 -3 ${-1 * notchSize} -4 ${-2 * notchSize} ` +
+        `l ${-4 * multiplier * notchSize} ${-4 * multiplier * notchSize} ` +
+        `c -1 ${-1 * notchSize} -2 ${-2 * notchSize} -4 ${-2 * notchSize} `
 
       BlockSvg.INPUT_SHAPE_HEXAGONAL =
         "M " +
