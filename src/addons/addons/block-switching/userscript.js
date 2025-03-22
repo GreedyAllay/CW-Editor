@@ -620,6 +620,18 @@ export default async function ({ addon, console, msg }) {
         },
         noopSwitch,
       ];
+      blockSwitches["operator_trueBoolean"] = [
+        noopSwitch,
+        {
+          opcode: "operator_falseBoolean",
+        },
+      ];
+      blockSwitches["operator_falseBoolean"] = [
+        {
+          opcode: "operator_trueBoolean",
+        },
+        noopSwitch,
+      ];
     }
 
     if (addon.settings.get("sensing")) {

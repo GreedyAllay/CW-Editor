@@ -214,6 +214,8 @@
     "block-switching/operator_multiply": "*",
     "block-switching/operator_or": "or",
     "block-switching/operator_subtract": "-",
+    "block-switching/operator_trueBoolean": "true",
+    "block-switching/operator_falseBoolean": "false",
     "block-switching/pen_changePenColorParamBy": "change parameter",
     "block-switching/pen_changePenHueBy": "change hue",
     "block-switching/pen_changePenShadeBy": "change shade",
