@@ -418,10 +418,6 @@ export default async function ({ addon, console, msg }) {
         },
         noopSwitch,
         {
-          opcode: "control_wait_until",
-          splitInputs: ["SUBSTACK"],
-        },
-        {
           opcode: "control_forever",
           splitInputs: ["CONDITION"],
         },
@@ -433,18 +429,36 @@ export default async function ({ addon, console, msg }) {
         {
           opcode: "operator_gt",
         },
-        noopSwitch,
+        {
+          opcode: "operator_gtorequal",
+        },
         {
           opcode: "operator_lt",
+        },
+        {
+          opcode: "operator_ltorequal",
+        },
+        noopSwitch,
+        {
+          opcode: "operator_notequal",
         },
       ];
       blockSwitches["operator_gt"] = [
         noopSwitch,
         {
-          opcode: "operator_equals",
+          opcode: "operator_gtorequal",
         },
         {
           opcode: "operator_lt",
+        },
+        {
+          opcode: "operator_ltorequal",
+        },
+        {
+          opcode: "operator_equals",
+        },
+        {
+          opcode: "operator_notequal",
         },
       ];
       blockSwitches["operator_lt"] = [
@@ -452,9 +466,72 @@ export default async function ({ addon, console, msg }) {
           opcode: "operator_gt",
         },
         {
+          opcode: "operator_gtorequal",
+        },
+        noopSwitch,
+        {
+          opcode: "operator_ltorequal",
+        },
+        {
+          opcode: "operator_equals",
+        },
+        {
+          opcode: "operator_notequal",
+        },
+      ];
+      blockSwitches["operator_notequal"] = [
+        {
+          opcode: "operator_gt",
+        },
+        {
+          opcode: "operator_gtorequal",
+        },
+        {
+          opcode: "operator_lt",
+        },
+        {
+          opcode: "operator_ltorequal",
+        },
+        {
           opcode: "operator_equals",
         },
         noopSwitch,
+      ];
+      blockSwitches["operator_gtorequal"] = [
+        {
+          opcode: "operator_gt",
+        },
+        noopSwitch,
+        {
+          opcode: "operator_lt",
+        },
+        {
+          opcode: "operator_ltorequal",
+        },
+        {
+          opcode: "operator_equals",
+        },
+        {
+          opcode: "operator_notequal",
+        },
+      ];
+      blockSwitches["operator_ltorequal"] = [
+        {
+          opcode: "operator_gt",
+        },
+        {
+          opcode: "operator_gtorequal",
+        },
+        {
+          opcode: "operator_lt",
+        },
+        noopSwitch,
+        {
+          opcode: "operator_equals",
+        },
+        {
+          opcode: "operator_notequal",
+        },
       ];
       blockSwitches["operator_add"] = [
         noopSwitch,
