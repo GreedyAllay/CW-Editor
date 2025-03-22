@@ -545,6 +545,9 @@ export default async function ({ addon, console, msg }) {
           opcode: "operator_divide",
         },
         {
+          opcode: "operator_power",
+        },
+        {
           opcode: "operator_mod",
         },
       ];
@@ -558,6 +561,9 @@ export default async function ({ addon, console, msg }) {
         },
         {
           opcode: "operator_divide",
+        },
+        {
+          opcode: "operator_power",
         },
         {
           opcode: "operator_mod",
@@ -575,6 +581,9 @@ export default async function ({ addon, console, msg }) {
           opcode: "operator_divide",
         },
         {
+          opcode: "operator_power",
+        },
+        {
           opcode: "operator_mod",
         },
       ];
@@ -587,6 +596,27 @@ export default async function ({ addon, console, msg }) {
         },
         {
           opcode: "operator_multiply",
+        },
+        noopSwitch,
+        {
+          opcode: "operator_power",
+        },
+        {
+          opcode: "operator_mod",
+        },
+      ];
+      blockSwitches["operator_power"] = [
+        {
+          opcode: "operator_add",
+        },
+        {
+          opcode: "operator_subtract",
+        },
+        {
+          opcode: "operator_multiply",
+        },
+        {
+          opcode: "operator_divide",
         },
         noopSwitch,
         {
@@ -605,6 +635,9 @@ export default async function ({ addon, console, msg }) {
         },
         {
           opcode: "operator_divide",
+        },
+        {
+          opcode: "operator_power",
         },
         noopSwitch,
       ];
