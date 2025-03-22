@@ -385,6 +385,9 @@ export default async function ({ addon, console, msg }) {
       blockSwitches["control_repeat_until"] = [
         noopSwitch,
         {
+          opcode: "control_while",
+        },
+        {
           opcode: "control_wait_until",
           splitInputs: ["SUBSTACK"],
         },
@@ -397,6 +400,9 @@ export default async function ({ addon, console, msg }) {
         {
           opcode: "control_repeat_until",
         },
+        {
+          opcode: "control_while",
+        },
         noopSwitch,
       ];
       blockSwitches["control_wait_until"] = [
@@ -404,6 +410,21 @@ export default async function ({ addon, console, msg }) {
           opcode: "control_repeat_until",
         },
         noopSwitch,
+      ];
+
+      blockSwitches["control_while"] = [
+        {
+          opcode: "control_repeat_until",
+        },
+        noopSwitch,
+        {
+          opcode: "control_wait_until",
+          splitInputs: ["SUBSTACK"],
+        },
+        {
+          opcode: "control_forever",
+          splitInputs: ["CONDITION"],
+        },
       ];
     }
 
