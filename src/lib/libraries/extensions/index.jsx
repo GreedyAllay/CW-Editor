@@ -74,6 +74,9 @@ import jwXmlExtensionIcon from './penguinmod/extensions/xml.png';
 
 import jwStructsExtensionIcon from './penguinmod/extensions/ooplogo.png';
 
+import jwArrayExtensionThumb from './penguinmod/extensions/jwArray.svg';
+import jwTargetsExtensionThumb from './penguinmod/extensions/jwTargets.svg';
+
 import iygPerlinNoiseExtensionIcon from './penguinmod/extensions/perlinnoisebanner.png';
 
 // thank yo godslayerakp for makin pmCamera :good:
@@ -848,6 +851,24 @@ const menuItems = [
         iconURL: jgJavascriptExtensionIcon,
         tags: ['penguinmod', 'programminglanguage'],
         description: 'Run your own custom code written in JavaScript!',
+        featured: true
+    },
+    {
+        name: 'Arrays',
+        extensionId: 'jwArray',
+        iconURL: jwArrayExtensionThumb,
+        tags: ['penguinmod', 'datamgmt'],
+        description: 'Store data efficiently in multi-purpose arrays.',
+        extDeveloper: 'jwklong',
+        featured: true
+    },
+    {
+        name: 'Targets',
+        extensionId: 'jwTargets',
+        iconURL: jwTargetsExtensionThumb,
+        tags: ['penguinmod'],
+        description: 'Direct access to sprites and their clones.',
+        extDeveloper: 'jwklong',
         featured: true
     },
     {
