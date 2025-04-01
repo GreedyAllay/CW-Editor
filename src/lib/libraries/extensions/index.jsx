@@ -74,6 +74,9 @@ import jwXmlExtensionIcon from './penguinmod/extensions/xml.png';
 
 import jwStructsExtensionIcon from './penguinmod/extensions/ooplogo.png';
 
+import jwArrayExtensionThumb from './penguinmod/extensions/jwArray.svg';
+import jwTargetsExtensionThumb from './penguinmod/extensions/jwTargets.svg';
+
 import iygPerlinNoiseExtensionIcon from './penguinmod/extensions/perlinnoisebanner.png';
 
 // thank yo godslayerakp for makin pmCamera :good:
@@ -113,6 +116,7 @@ import jgCloneManagerExtensionIcon from './penguinmod/extensions/clonemanager.pn
 import pmInlineBlocksExtensionIcon from './penguinmod/extensions/inlineblocks.png';
 import jgPackagerApplicationsExtensionIcon from './penguinmod/extensions/packagedApplications.png';
 import jgPackagerApplicationsInsetExtensionIcon from './penguinmod/extensions/packagedApplications_inset.png';
+import spJSONExtensionIcon from './penguinmod/extensions/sp_json.svg';
 
 // import jgTweeningExtensionIcon from './penguinmod/extensions/tween.png';
 import jgsilvxrcatInterfacesExtensionIcon from './penguinmod/extensions/interfaces2.png';
@@ -446,6 +450,15 @@ const menuItems = [
         iconURL: jgJSONExtensionIcon,
         tags: ['penguinmod', 'datamgmt'],
         description: 'Blocks for handling JSON objects and Arrays.',
+        featured: true
+    },
+    {
+        name: 'Swift JSON',
+        extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/JSON-Array.js',
+        iconURL: spJSONExtensionIcon,
+        tags: ['penguinmod', 'datamgmt'],
+        extDeveloper: 'SharkPool',
+        description: 'POTENTIALLY DANGEROUS, but faster extension for handling JSON objects and arrays. Recommended if you are heavily using JSON several times in a project.',
         featured: true
     },
     {
@@ -838,6 +851,24 @@ const menuItems = [
         iconURL: jgJavascriptExtensionIcon,
         tags: ['penguinmod', 'programminglanguage'],
         description: 'Run your own custom code written in JavaScript!',
+        featured: true
+    },
+    {
+        name: 'Arrays',
+        extensionId: 'jwArray',
+        iconURL: jwArrayExtensionThumb,
+        tags: ['penguinmod', 'datamgmt'],
+        description: 'Store data efficiently in multi-purpose arrays.',
+        extDeveloper: 'jwklong',
+        featured: true
+    },
+    {
+        name: 'Targets',
+        extensionId: 'jwTargets',
+        iconURL: jwTargetsExtensionThumb,
+        tags: ['penguinmod'],
+        description: 'Direct access to sprites and their clones.',
+        extDeveloper: 'jwklong',
         featured: true
     },
     {
