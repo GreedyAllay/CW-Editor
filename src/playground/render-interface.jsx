@@ -475,7 +475,7 @@ class Interface extends React.Component {
                             </div>
                             <a
                                 target="_blank"
-                                href="https://penguinmod.com/search?q=all:projects"
+                                href="https://penguinmod.com/search?q=newest:"
                                 rel="noreferrer"
                             >
                                 See more projects
