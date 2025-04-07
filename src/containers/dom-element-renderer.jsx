@@ -22,7 +22,8 @@ class DOMElementRenderer extends React.Component {
         this.container.appendChild(this.props.domElement);
     }
     componentWillUnmount () {
-        if (this.props.domElement.parentNode !== this.container.childNodes[0]) return console.error('idk how to solve this, all i know is the site just keeps dieing with this exact issue');
+        if (this.props.domElement.parentNode !== this.container.childNodes[0]) 
+            return console.error('idk how to solve this, all i know is the site just keeps dieing with this exact issue');
         this.container.removeChild(this.props.domElement);
     }
     setContainer (c) {
@@ -40,6 +41,10 @@ class DOMElementRenderer extends React.Component {
         // Convert react style prop to dom element styling.
         if (this.props.style) {
             this.props.domElement.style.cssText = Style.string(this.props.style);
+        }
+        if (this.container) {
+            this.container.innerHTML = '';
+            this.container.appendChild(this.props.domElement);
         }
 
         return <div ref={this.setContainer} />;
