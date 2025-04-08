@@ -226,4 +226,9 @@ export default defineMessages({
         description: 'Tag for filtering a library by monster sounds.',
         id: 'gui.libraryTags.monster'
     },
+    math: {
+        defaultMessage: 'Math',
+        description: 'Tag for filtering a library by math.',
+        id: 'gui.libraryTags.math'
+    },
 });

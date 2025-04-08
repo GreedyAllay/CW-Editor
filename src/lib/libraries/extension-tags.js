@@ -6,6 +6,7 @@ export default [
     { tag: 'divider2', intlLabel: messages.scratch, type: 'divider' },
     { tag: 'graphics', intlLabel: messages.graphics },
     { tag: 'noisemaker', intlLabel: messages.noisemaker },
+    { tag: 'math', intlLabel: messages.math },
     { tag: 'datamgmt', intlLabel: messages.datamgmt },
     { tag: 'hardware', intlLabel: messages.hardware },
     { tag: 'divider2', intlLabel: messages.scratch, type: 'divider' },

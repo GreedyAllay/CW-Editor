@@ -76,6 +76,7 @@ import jwStructsExtensionIcon from './penguinmod/extensions/ooplogo.png';
 
 import jwArrayExtensionThumb from './penguinmod/extensions/jwArray.svg';
 import jwTargetsExtensionThumb from './penguinmod/extensions/jwTargets.svg';
+import jwNumExtensionThumb from './penguinmod/extensions/jwNum.svg';
 
 import iygPerlinNoiseExtensionIcon from './penguinmod/extensions/perlinnoisebanner.png';
 
@@ -422,7 +423,7 @@ const menuItems = [
         name: 'Operators Expansion',
         extensionId: 'pmOperatorsExpansion',
         iconURL: pmOperatorsExpansionExtensionIcon,
-        tags: ['penguinmod', 'categoryexpansion'],
+        tags: ['penguinmod', 'categoryexpansion', 'math'],
         description: 'More operators like nand, nor, character code to character, reading multiple lined text line by line, etc.',
         featured: true
     },
@@ -644,7 +645,7 @@ const menuItems = [
         name: '3D Math',
         extensionId: 'https://extensions.penguinmod.com/extensions/ObviousAlexC/3DMath.js',
         iconURL: 'https://extensions.penguinmod.com/images/ObviousAlexC/3DMath.svg',
-        tags: ['penguinmod', '3d', 'graphics'],
+        tags: ['penguinmod', '3d', 'graphics', 'math'],
         description: 'A handful of utilities for making your own sprite-based 3D engine.',
         extDeveloper: 'pinksheep2917',
         featured: true
@@ -653,10 +654,10 @@ const menuItems = [
         name: 'Extra Mathematics',
         extensionId: 'https://extensions.penguinmod.com/extensions/jwklong/mathematics.js',
         iconURL: 'https://extensions.penguinmod.com/images/jwklong/mathematics.png',
-        tags: ['penguinmod', 'categoryexpansion'],
+        tags: ['penguinmod', 'categoryexpansion', 'math'],
         description: 'Complicated maths extension for nerds.',
         extDeveloper: 'jwklong',
-        featured: true
+        featured: false //i dont like this extension any more
     },
     {
         name: 'Random Utilities',
@@ -869,6 +870,16 @@ const menuItems = [
         tags: ['penguinmod'],
         description: 'Direct access to sprites and their clones.',
         extDeveloper: 'jwklong',
+        featured: true
+    },
+    {
+        name: 'Infinity',
+        extensionId: 'jwNum',
+        iconURL: jwNumExtensionThumb,
+        tags: ['penguinmod', 'math'],
+        description: 'Advanced number type capable of really big numbers.',
+        extDeveloper: 'jwklong',
+        credits: 'Naruyoko for ExpantaNum.js'
         featured: true
     },
     {
