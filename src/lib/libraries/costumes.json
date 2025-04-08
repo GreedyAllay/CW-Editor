@@ -2962,6 +2962,24 @@
         "libraryFilePage": "images/user/cubey.svg"
     },
     {
+         "name": "Chucho",
+         "tags": [
+             "animal",
+             "dog",
+             "pet",
+             "domestic",
+             "white",
+             "small",
+             "sitting"
+         ],
+         "bitmapResolution": 1,
+         "dataFormat": "png",
+         "rotationCenterX": 0,
+         "rotationCenterY": 0,
+         "fromPenguinModLibrary": true,
+         "libraryFilePage": "images/user/chucho.png"
+     },
+    {
         "name": "Cursor",
         "tags": [
             "mouse",
