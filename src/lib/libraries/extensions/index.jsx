@@ -650,15 +650,15 @@ const menuItems = [
         extDeveloper: 'pinksheep2917',
         featured: true
     },
-    {
+    /*{                                   i dont like this extension anymore it kinda sucks
         name: 'Extra Mathematics',
         extensionId: 'https://extensions.penguinmod.com/extensions/jwklong/mathematics.js',
         iconURL: 'https://extensions.penguinmod.com/images/jwklong/mathematics.png',
         tags: ['penguinmod', 'categoryexpansion', 'math'],
         description: 'Complicated maths extension for nerds.',
         extDeveloper: 'jwklong',
-        featured: false //i dont like this extension any more
-    },
+        featured: false
+    },*/
     {
         name: 'Random Utilities',
         extensionId: 'https://extensions.penguinmod.com/extensions/Gen1x/random_utils.js',
