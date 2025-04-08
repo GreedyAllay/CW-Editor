@@ -879,7 +879,7 @@ const menuItems = [
         tags: ['penguinmod', 'math'],
         description: 'Advanced number type capable of really big numbers.',
         extDeveloper: 'jwklong',
-        credits: 'Naruyoko for ExpantaNum.js'
+        credits: 'Naruyoko for ExpantaNum.js',
         featured: true
     },
     {
