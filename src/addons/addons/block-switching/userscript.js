@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export default async function ({ addon, console, msg }) {
   const ScratchBlocks = await addon.tab.traps.getBlockly();
   const vm = addon.tab.traps.vm;
@@ -27,6 +29,20 @@ export default async function ({ addon, console, msg }) {
       blockSwitches["motion_turnleft"] = [
         {
           opcode: "motion_turnright",
+        },
+        noopSwitch,
+      ];
+      blockSwitches["motion_gotoxy"] = [
+        noopSwitch,
+        {
+          opcode: "motion_changebyxy",
+          remapInputName: { X: "DX", Y: "DY" },
+        }
+      ];
+      blockSwitches["motion_changebyxy"] = [
+        {
+          opcode: "motion_gotoxy",
+          remapInputName: { DX: "X", DY: "Y" },
         },
         noopSwitch,
       ];

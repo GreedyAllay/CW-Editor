@@ -195,6 +195,8 @@
     "block-switching/motion_changeyby": "change y",
     "block-switching/motion_setx": "set x",
     "block-switching/motion_sety": "set y",
+    "block-switching/motion_changebyxy": "change by x y",
+    "block-switching/motion_gotoxy": "goto x y",
     "block-switching/motion_turnleft": "turn left",
     "block-switching/motion_turnright": "turn right",
     "block-switching/motion_xposition": "x position",
