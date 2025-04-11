@@ -18,7 +18,8 @@ module.exports = {
             'allowParens': true
         }],
         'operator-linebreak': 'off',
-        'no-console': 'off'
+        'no-console': 'off',
+        'space-before-function-paren': 'off'
     },
     settings: {
         react: {
