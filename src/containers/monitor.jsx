@@ -198,7 +198,6 @@ class Monitor extends React.Component {
         downloadBlob(`${variable.name}.txt`, blob);
     }
     render () {
-        console.log('got to the monitor');
         const monitorProps = monitorAdapter(this.props);
         const showSliderOption = availableModes(this.props.opcode).indexOf('slider') !== -1;
         const isList = this.props.mode === 'list';
