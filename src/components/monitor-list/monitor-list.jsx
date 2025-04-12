@@ -8,6 +8,7 @@ import {stageSizeToTransform} from '../../lib/screen-utils';
 
 import styles from './monitor-list.css';
 
+let different = 0;
 const MonitorList = props => (
     <Box
         // Use static `monitor-overlay` class for bounds of draggables
@@ -21,10 +22,10 @@ const MonitorList = props => (
             className={styles.monitorListScaler}
             style={stageSizeToTransform(props.stageSize)}
         >
-            {props.monitors.valueSeq().filter(m => m.visible)
+            {(props.monitors.valueSeq().filter(m => m.visible)
                 .map(monitorData => (
                     <Monitor
-                        draggable={props.draggable}
+                        draggable={(console.log('setting new props for', monitorData.id), props.draggable)}
                         height={monitorData.height}
                         id={monitorData.id}
                         isDiscrete={monitorData.isDiscrete}
@@ -41,8 +42,9 @@ const MonitorList = props => (
                         x={monitorData.x}
                         y={monitorData.y}
                         onDragEnd={props.onMonitorChange}
+                        needsUpdate={monitorData.value?._monitorUpToDate ? different : ++different}
                     />
-                ))}
+                )))}
         </Box>
     </Box>
 );

@@ -13,9 +13,9 @@ const DefaultMonitor = ({categoryColor, label, value, isHTML}) => (
                 className={styles.value}
                 style={{background: categoryColor}}
             >
-                {isHTML
+                {(console.log('got to end'), isHTML
                     ? (<DOMElementRenderer domElement={value} />)
-                    : String(value)}
+                    : String(value))}
             </div>
         </div>
     </div>

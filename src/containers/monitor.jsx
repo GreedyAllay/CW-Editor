@@ -86,20 +86,12 @@ class Monitor extends React.Component {
         this.element.style.left = `${rect.upperStart.x}px`;
     }
     shouldComponentUpdate (nextProps, nextState) {
-        if (nextState !== this.state) {
-            return true;
-        }
-        for (const key of Object.getOwnPropertyNames(nextProps)) {
-            // skip all the other things to check custom monitors and see if they need an update
-            if (key === 'value' && typeof nextProps[key] === 'object') {
-                return !nextProps[key]._monitorUpToDate;
-            }
-            // Don't need to rerender when other monitors are moved.
-            // monitorLayout is only used during initial layout.
-            if (key !== 'monitorLayout' && nextProps[key] !== this.props[key]) {
-                return true;
-            }
-        }
+        console.log('got to notifying new props');
+        if (nextState !== this.state) return true;
+        if (nextProps !== this.props) return true;
+        if (nextProps.monitorLayout !== this.props.monitorLayout) return true;
+        if (nextProps.value !== this.props.value) return true;
+        if (!nextProps.value?._monitorUpToDate) return true;
         return false;
     }
     componentDidUpdate () {
@@ -207,6 +199,7 @@ class Monitor extends React.Component {
         downloadBlob(`${variable.name}.txt`, blob);
     }
     render () {
+        console.log('got to the monitor');
         const monitorProps = monitorAdapter(this.props);
         const showSliderOption = availableModes(this.props.opcode).indexOf('slider') !== -1;
         const isList = this.props.mode === 'list';

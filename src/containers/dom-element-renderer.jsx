@@ -22,14 +22,14 @@ class DOMElementRenderer extends React.Component {
         this.container.appendChild(this.props.domElement);
     }
     componentWillUnmount () {
-        if (this.props.domElement.parentNode !== this.container.childNodes[0]) 
-            return console.error('idk how to solve this, all i know is the site just keeps dieing with this exact issue');
+        if (this.props.domElement.parentNode !== this.container) return;
         this.container.removeChild(this.props.domElement);
     }
     setContainer (c) {
         this.container = c;
     }
     render () {
+        console.log('got here?');
         // Apply props to the DOM element, so its attributes
         // are updated as if it were a normal component.
         // Look at me, I'm the React now!
