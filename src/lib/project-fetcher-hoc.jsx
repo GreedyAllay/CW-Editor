@@ -336,7 +336,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
 
                             const arrayBuffer = await zip.generateAsync({ type: "arraybuffer" });
 
-                            return arrayBuffer
+                            return arrayBuffer;
                         })
                         .then(buffer => ({ data: buffer }))
                         .catch(error => {
@@ -365,17 +365,26 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                         // pm: Failed to grab data, use the "fetch" API as a backup
                         // we shouldnt be interrupted by the fetch replacement in tw-progress-monitor
                         // as it uses projects.scratch.mit.edu still
-                        fetch(projectUrl).then(res => {
+                        fetch(projectUrl).then(async res => {
                             if (!res.ok) {
                                 // Treat failure to load as an error
                                 // Throw to be caught by catch later on
                                 throw new Error('Could not find project; ' + projectUrl);
                             }
-                            res.arrayBuffer().then(data => {
-                                this.props.onFetchedProjectData(data, loadingState);
-                            }).catch(err => {
-                                throw new Error('ArrayBuffer conversion failed; ' + err);
-                            })
+
+                            const project = await res.json();
+                            const json = protobufToJson(new Uint8Array(project.project.data));
+
+                            // now get the assets
+                            let zip = new JSZip();
+                            zip.file("project.json", JSON.stringify(json));
+                            
+                            for (const asset of project.assets) {
+                                zip.file(asset.id, new Uint8Array(asset.buffer.data).buffer);
+                            }
+
+                            const arrayBuffer = await zip.generateAsync({ type: "arraybuffer" });
+                            this.props.onFetchedProjectData(arrayBuffer, loadingState);
                         }).catch(err => {
                             throw new Error('Could not find project; ' + err);
                         })

@@ -19,7 +19,8 @@ module.exports = {
         }],
         'operator-linebreak': 'off',
         'no-console': 'off',
-        'space-before-function-paren': 'off'
+        'space-before-function-paren': 'off',
+        'no-lonely-if': 'off'
     },
     settings: {
         react: {
