@@ -86,7 +86,6 @@ class Monitor extends React.Component {
         this.element.style.left = `${rect.upperStart.x}px`;
     }
     shouldComponentUpdate (nextProps, nextState) {
-        console.log('got to notifying new props');
         if (nextState !== this.state) return true;
         if (nextProps !== this.props) return true;
         if (nextProps.monitorLayout !== this.props.monitorLayout) return true;

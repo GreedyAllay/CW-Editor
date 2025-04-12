@@ -53,10 +53,10 @@ const MonitorComponent = props => (
                 data-id={props.id}
                 data-opcode={props.opcode}
             >
-                {(console.log('got to the root'), React.createElement(modes[props.mode], {
+                {React.createElement(modes[props.mode], {
                     categoryColor: categories[props.category],
                     ...props
-                }))}
+                })}
             </Box>
         </Draggable>
         {ReactDOM.createPortal((

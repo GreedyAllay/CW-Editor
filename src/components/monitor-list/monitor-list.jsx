@@ -25,7 +25,7 @@ const MonitorList = props => (
             {(props.monitors.valueSeq().filter(m => m.visible)
                 .map(monitorData => (
                     <Monitor
-                        draggable={(console.log('setting new props for', monitorData.id), props.draggable)}
+                        draggable={props.draggable}
                         height={monitorData.height}
                         id={monitorData.id}
                         isDiscrete={monitorData.isDiscrete}
